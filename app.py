@@ -28,9 +28,9 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587  # Or 465 if using SSL
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False # True if using port 465
-app.config['MAIL_USERNAME'] = 'loggerattendance@gmail.com'  # Gmail address
-app.config['MAIL_PASSWORD'] = 'tcgj qswm ewvm eoju' # Your Gmail App Password or regular password (less secure)
-app.config['MAIL_DEFAULT_SENDER'] = ('Attendance Logger', 'loggerattendance@gmail.com') # Tuple: (Display Name, Email Address)
+app.config['MAIL_USERNAME'] = ''  # Gmail address
+app.config['MAIL_PASSWORD'] = '' # Your Gmail App Password or regular password (less secure)
+app.config['MAIL_DEFAULT_SENDER'] = ('Attendance Logger', '') # Tuple: (Display Name, Email Address)
 
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -701,4 +701,5 @@ def set_new_password():
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
+
     app.run(debug=True)
